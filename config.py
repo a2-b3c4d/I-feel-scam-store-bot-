@@ -16,26 +16,26 @@ APP_ID = int(os.environ.get("APP_ID", ""))
 #Your API Hash from my.telegram.org
 API_HASH = os.environ.get("API_HASH", "")
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001995978690"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002256509918"))
 #OWNER USERNAMA OWNER
-OWNER = os.environ.get("OWNER", "hateXfree")
+OWNER = os.environ.get("OWNER", "Tharun_stryker")
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "6497757690"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "6586630448"))
 # OWNER USERNAME WITHOUT @ REQUIRED 
 OWNER_USER = os.environ.get("OWNER_USER", " ")
 #Port
 PORT = os.environ.get("PORT", "8030")
 #Database
 DB_URI = os.environ.get("DATABASE_URL", "")
-DB_NAME = os.environ.get("DATABASE_NAME", "OutlawBots")
+DB_NAME = os.environ.get("DATABASE_NAME", "cluster0")
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001473043276"))
-FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1001644866777"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002306307006"))
+FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1002306870616"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
-START_PIC = os.environ.get("START_PIC", "https://graph.org/file/52cd697e31b12fe66c184.jpg")
-FORCE_PIC = os.environ.get("FORCE_PIC", "https://graph.org/file/de393fd77ae7c863ece10.jpg")
+START_PIC = os.environ.get("START_PIC", "https://iili.io/2QFefUb.jpg")
+FORCE_PIC = os.environ.get("FORCE_PIC", "https://iili.io/2QFefUb.jpg")
 
 HELP_TXT = "<b>ᴛʜɪs ɪs ᴀɴ ғɪʟᴇ ᴛᴏ ʟɪɴᴋ ʙᴏᴛ ᴡᴏʀᴋ ғᴏʀ @OutlawBots\n\n❏ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs\n├/start : sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ\n├/about : ᴏᴜʀ Iɴғᴏʀᴍᴀᴛɪᴏɴ\n└/help : ʜᴇʟᴘ ʀᴇʟᴀᴛᴇᴅ ʙᴏᴛ\n\n sɪᴍᴘʟʏ ᴄʟɪᴄᴋ ᴏɴ ʟɪɴᴋ ᴀɴᴅ sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ ᴊᴏɪɴ ʙᴏᴛʜ ᴄʜᴀɴɴᴇʟs ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴛʜᴀᴛs ɪᴛ.....!\n\n ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ <a href=https://t.me/HateXfree>ᯓ ʜᴀᴛᴇ ғʀᴇᴇ ᡣ𐭩</a></b>"
 #Change This Person link 😂 important!!
