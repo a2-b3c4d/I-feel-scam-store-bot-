@@ -3,7 +3,7 @@ import pyrogram.utils
 from bot import Bot
 
 # Set Pyrogram minimum channel ID
-pyrogram.utils.MIN_CHANNEL_ID = -1009147483647
+pyrogram.utils.MIN_CHANNEL_ID = -1002256509918
 
 # Function to run the bot properly
 def main():
