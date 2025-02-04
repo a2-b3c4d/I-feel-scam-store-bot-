@@ -1,36 +1,32 @@
-#(©)CodeXBotz
-
-
-
-
-import pymongo, os
+import pymongo
+import os
 from config import DB_URI, DB_NAME
 
+# Validate DB_URI
+if not DB_URI:
+    raise ValueError("Database URI is missing. Set DB_URI in config.py")
 
-dbclient = pymongo.MongoClient(DB_URI)
-database = dbclient[DB_NAME]
+try:
+    dbclient = pymongo.MongoClient(DB_URI)  # Connect to MongoDB
+    database = dbclient[DB_NAME]  # Select database
+    user_data = database["users"]  # Select collection
+except pymongo.errors.ConnectionError as e:
+    print(f"MongoDB Connection Error: {e}")
+    exit(1)
 
-
-user_data = database['users']
-
-
-
-async def present_user(user_id : int):
-    found = user_data.find_one({'_id': user_id})
-    return bool(found)
+async def present_user(user_id: int):
+    """Check if user exists"""
+    return bool(user_data.find_one({'_id': user_id}))
 
 async def add_user(user_id: int):
-    user_data.insert_one({'_id': user_id})
-    return
+    """Add a new user"""
+    if not present_user(user_id):
+        user_data.insert_one({'_id': user_id})
 
 async def full_userbase():
-    user_docs = user_data.find()
-    user_ids = []
-    for doc in user_docs:
-        user_ids.append(doc['_id'])
-        
-    return user_ids
+    """Get list of all user IDs"""
+    return [doc['_id'] for doc in user_data.find()]
 
 async def del_user(user_id: int):
+    """Delete a user"""
     user_data.delete_one({'_id': user_id})
-    return
